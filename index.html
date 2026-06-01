@@ -5,121 +5,204 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For Denaya Hana Almira ❤️</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #050505;
+            background-color: #070101;
+            background-image: 
+                radial-gradient(circle at 50% 20%, rgba(139, 0, 0, 0.25) 0%, transparent 50%),
+                radial-gradient(circle at 50% 80%, rgba(255, 0, 0, 0.1) 0%, transparent 60%);
+            background-attachment: fixed;
         }
-        .font-serif-custom {
-            font-family: 'Cinzel', serif;
+        .font-ferrari { font-family: 'Cinzel', serif; }
+        .font-cursive { font-family: 'Great Vibes', cursive; }
+        
+        /* Efek Red Neon Glow */
+        .neon-glow-text {
+            text-shadow: 0 0 8px rgba(239, 68, 68, 0.9), 0 0 20px rgba(239, 68, 68, 0.4);
         }
-        .font-cursive {
-            font-family: 'Great Vibes', cursive;
+        .neon-box {
+            box-shadow: 0 0 20px rgba(239, 68, 68, 0.4), inset 0 0 15px rgba(239, 68, 68, 0.15);
+            border: 1px solid rgba(239, 68, 68, 0.6);
         }
-        /* Efek Glow Merah Neon */
-        .neon-text {
-            text-shadow: 0 0 10px rgba(239, 68, 68, 0.8), 0 0 20px rgba(239, 68, 68, 0.4);
-        }
-        .neon-border {
-            box-shadow: 0 0 15px rgba(239, 68, 68, 0.5), inset 0 0 15px rgba(239, 68, 68, 0.2);
-            border: 1px solid rgba(239, 68, 68, 0.7);
-        }
+        
         /* Animasi Detak Jantung */
-        @keyframes heartbeat {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.15); }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.9; }
+            50% { transform: scale(1.1); opacity: 1; }
         }
-        .heart-beat {
-            animation: heartbeat 1.2s infinite;
-        }
-        /* Background gradient gelap balapan */
-        .bg-race {
-            background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(20,20,20,1) 100%);
+        .pulse-heart { animation: pulse 1.5s infinite ease-in-out; }
+        
+        /* Checkered flag pattern untuk border bawah */
+        .checkered-pattern {
+            background-image: linear-gradient(45deg, #111 25%, transparent 25%), linear-gradient(-45deg, #111 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #111 75%), linear-gradient(-45deg, transparent 75%, #111 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
         }
     </style>
 </head>
-<body class="text-gray-200 min-h-screen bg-race flex flex-col items-center overflow-x-hidden">
+<body class="text-neutral-300 min-h-screen flex flex-col items-center overflow-x-hidden relative selection:bg-red-600 selection:text-white">
 
+    <!-- AUDIO ELEMENTS (Menggunakan instrumen piano 'A Sky Full of Stars') -->
     <audio id="bg-music" loop>
         <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
     </audio>
 
-    <header class="w-full max-w-2xl px-6 pt-12 pb-6 text-center flex flex-col items-center relative">
-        <div class="text-amber-400 font-bold tracking-widest text-xs uppercase mb-1 font-serif-custom">SCUDERIA FERRARI</div>
-        <div class="w-12 h-12 bg-amber-400 rounded-sm flex items-center justify-center font-bold text-black text-xl shadow-lg mb-6">SF</div>
-        
-        <p class="text-xs tracking-widest text-gray-400 uppercase">For</p>
-        <h1 class="text-3xl md:text-4xl font-light text-white my-3 tracking-wide font-serif-custom">
-            Denaya Hana Almira <span class="text-red-500 heart-beat inline-block">♡</span>
+    <!-- TOP DECORATIVE BAR -->
+    <div class="w-full max-w-4xl px-4 pt-4 flex justify-between text-[9px] tracking-[0.3em] text-neutral-500 font-ferrari">
+        <div>— SCUDERIA FERRARI</div>
+        <div>NEVER STOP PUSHING —</div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <header class="w-full max-w-2xl text-center pt-12 pb-8 px-4 flex flex-col items-center">
+        <!-- Scuderia Ferrari Emblem Mock -->
+        <div class="mb-4 relative">
+            <div class="w-14 h-16 bg-amber-400 rounded-b-full flex flex-col items-center justify-center pt-1 shadow-lg border border-amber-300">
+                <span class="text-black font-black text-xl tracking-tighter leading-none">S</span>
+                <span class="text-black font-black text-sm leading-none -mt-1">F</span>
+            </div>
+            <div class="absolute -top-1 left-0 right-0 h-1 flex">
+                <div class="w-1/3 bg-green-600 h-full"></div>
+                <div class="w-1/3 bg-white h-full"></div>
+                <div class="w-1/3 bg-red-600 h-full"></div>
+            </div>
+        </div>
+
+        <p class="text-[10px] tracking-[0.4em] text-neutral-400 font-ferrari uppercase mb-1">UNTUK</p>
+        <h1 class="text-3xl md:text-5xl font-medium text-white mb-3 tracking-wide font-ferrari neon-glow-text">
+            Denaya Hana Almira <span class="text-red-500 pulse-heart inline-block">♡</span>
         </h1>
         
-        <p class="text-xs text-amber-500 tracking-wider uppercase mb-8 font-serif-custom">✨ YOU ARE MY GREATEST VICTORY ✨</p>
-        
-        <button onclick="bukaSurat()" id="btn-buka" class="bg-red-950/40 hover:bg-red-900/60 text-red-400 border border-red-700 px-6 py-3 rounded-md text-sm tracking-wider transition-all duration-300 flex items-center gap-2 shadow-lg shadow-red-950/50">
-            Buka Surat Buat Denaya ✉️
+        <div class="flex items-center gap-2 text-[10px] text-amber-500 tracking-[0.25em] font-ferrari uppercase mb-8">
+            <span>🌿</span> YOU ARE MY GREATEST VICTORY <span>🌿</span>
+        </div>
+
+        <!-- TOMBOL BUKA SURAT -->
+        <button onclick="bukaSurat()" id="btn-buka" class="group bg-red-950/40 hover:bg-red-900/60 text-red-400 border border-red-700/70 px-8 py-3.5 rounded-md text-xs tracking-[0.2em] font-ferrari transition-all duration-300 flex items-center gap-3 shadow-xl backdrop-blur-sm">
+            <span>BUKA SURAT UNTUK DENAYA</span>
+            <span class="text-sm group-hover:translate-x-1 transition-transform">✉️</span>
         </button>
     </header>
 
-    <main id="konten-surat" class="hidden w-full max-w-xl px-4 transition-all duration-1000 ease-in-out">
+    <!-- CONTENT AREA (Hidden initially) -->
+    <main id="konten-surat" class="hidden w-full max-w-2xl px-4 mb-28 transition-all duration-1000 ease-in-out">
         
-        <div class="neon-border bg-black/80 rounded-xl p-8 text-center relative overflow-hidden backdrop-blur-sm">
-            <div class="text-red-500 text-xl mb-4">❤️</div>
-            
-            <h2 class="text-2xl text-white font-serif-custom mb-6">Untuk Denaya Hana Almira,</h2>
-            
-            <div class="space-y-4 text-sm text-gray-300 font-light leading-relaxed">
-                <p>Hai sayang,</p>
-                <p>Aku mau minta maaf karena udah ngeledekin kamu.</p>
-                <p class="text-red-500 font-semibold tracking-wide neon-text">Maafin aku sudah ngatain tiffosi.</p>
-                <p>Aku sadar itu salah.</p>
-                <p class="text-red-400 font-medium">Aku janji gabakal ngulangin lagi, insyaallah.</p>
-            </div>
-
-            <div class="text-3xl font-cursive text-red-400 mt-8 mb-2">With all my heart,</div>
-            <div class="text-red-500 text-xl mt-2">❤️</div>
+        <!-- FERRARI ATTRIBUTES HEADER -->
+        <div class="grid grid-cols-4 text-center text-[9px] tracking-widest text-neutral-500 font-ferrari border-y border-neutral-900 py-3 my-6">
+            <div>❤️ PASSION</div>
+            <div>🎯 FOCUS</div>
+            <div class="text-red-600 font-bold text-xs -mt-0.5">16</div>
+            <div>🏁 VICTORY</div>
         </div>
 
-        <div class="mt-12 text-center pb-24">
-            <h3 class="text-4xl md:text-5xl text-red-500 font-cursive neon-text mb-2">I Love You</h3>
-            <p class="text-xl md:text-2xl text-white font-light tracking-wide font-serif-custom">To The Moon And Back</p>
-            <div class="text-red-500 text-sm mt-4 heart-beat">❤️</div>
+        <!-- MAIN LETTER BOX -->
+        <div class="neon-box bg-neutral-950/80 rounded-xl p-6 md:p-10 relative overflow-hidden backdrop-blur-md">
+            
+            <div class="text-center text-red-500 text-lg mb-4">❤️</div>
+            <h2 class="text-xl md:text-2xl text-center text-white font-ferrari mb-8 tracking-wide">Untuk Denaya Hana Almira,</h2>
+            
+            <!-- Letter Body with Custom Layout -->
+            <div class="space-y-5 text-sm text-neutral-300 font-light leading-relaxed text-center max-w-lg mx-auto">
+                <p class="text-neutral-400">Hai sayang,</p>
+                <p>Aku mau minta maaf dengan tulus dari hati yang paling dalam.</p>
+                
+                <!-- Red Alert text like the image -->
+                <p class="text-red-500 font-semibold tracking-wide text-base neon-glow-text my-4">
+                    Maafin aku sudah ngatain tiffosi.
+                </p>
+                
+                <p class="text-neutral-400">Aku sadar itu salah.</p>
+                <p class="text-red-400 font-medium">Aku janji gabakal ngulangin lagi.</p>
+                
+                <p>Aku bakal lebih jaga ucapan dan sikap aku ke depannya, karena kamu itu berharga banget buat aku.</p>
+                <p>Terima kasih karena selalu sabar dan tetap ada buat aku. Aku beruntung punya kamu.</p>
+            </div>
+
+            <!-- Polaroid Section inside the letter just like the image -->
+            <div class="mt-10 flex justify-center">
+                <div class="bg-white text-black p-3 pb-5 rounded-sm shadow-2xl rotate-3 transform hover:rotate-0 transition-transform duration-300 w-48">
+                    <!-- Placeholder for Charles/Couple photo using a high quality racing style avatar -->
+                    <div class="w-full h-40 bg-neutral-900 bg-cover bg-center mb-3 border border-neutral-200" style="background-image: url('https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=400&auto=format&fit=crop');"></div>
+                    <div class="font-cursive text-xl text-center text-neutral-800 leading-none">Charles Leclerc ♡</div>
+                </div>
+            </div>
+
+            <div class="text-center text-4xl font-cursive text-red-400 mt-12 mb-2">With all my heart,</div>
+            <div class="text-center text-red-500 text-lg">❤️</div>
+        </div>
+
+        <!-- CHECKERED BREAK & SECOND EMBLEM -->
+        <div class="h-4 checkered-pattern my-10 opacity-30 w-full rounded-full"></div>
+        <div class="flex justify-center mb-6">
+            <div class="w-8 h-10 bg-amber-400 rounded-b-full flex flex-col items-center justify-center pt-0.5 shadow-md">
+                <span class="text-black font-black text-xs leading-none">SF</span>
+            </div>
+        </div>
+
+        <!-- DEEP LOVE TEXT & MOON IMAGERY -->
+        <div class="text-center space-y-2 py-6 relative">
+            <h3 class="text-5xl md:text-6xl text-red-500 font-cursive neon-glow-text">I Love You</h3>
+            <p class="text-xl md:text-2xl text-white font-light tracking-wider font-ferrari">To The Moon And Back</p>
+            <div class="text-red-500 text-sm pt-2 pulse-heart">❤️</div>
+            
+            <!-- Countdown Box for Birthday (5 Desember) -->
+            <div class="mt-8 inline-block bg-neutral-900/50 border border-neutral-800 rounded-lg px-6 py-3 text-xs tracking-wider text-neutral-400">
+                 ✨ <span class="text-white font-medium">5 Desember 2008</span> — <span class="text-red-400 font-semibold" id="countdown-days">258</span> Hari Lagi Menuju Hari Spesial Naya! ✨
+            </div>
         </div>
     </main>
 
-    <footer class="fixed bottom-4 left-4 right-4 max-w-xl mx-auto bg-neutral-900/90 border border-neutral-800 rounded-xl p-3 flex items-center justify-between backdrop-blur-md shadow-2xl z-50">
+    <!-- FLOATING MUSIC PLAYER (BAR SPOTIFY) -->
+    <footer class="fixed bottom-4 left-4 right-4 max-w-md mx-auto bg-neutral-950/90 border border-neutral-900 rounded-xl p-3 flex items-center justify-between backdrop-blur-lg shadow-2xl z-50">
         <div class="flex items-center gap-3">
-            <div class="w-10 h-10 bg-red-600 rounded-md flex items-center justify-center font-bold text-white text-xs">#16</div>
+            <!-- Music Thumbnail Layout -->
+            <div class="w-10 h-10 bg-red-700 rounded-md flex flex-col items-center justify-center font-bold text-white text-[10px] border border-red-600 shadow-inner">
+                <span>#16</span>
+            </div>
             <div>
-                <div class="text-xs font-semibold text-white">A Sky Full of Stars</div>
-                <div class="text-[10px] text-gray-400">Coldplay</div>
+                <div class="text-xs font-semibold text-white tracking-wide">A Sky Full of Stars</div>
+                <div class="text-[10px] text-neutral-400">Coldplay</div>
             </div>
         </div>
         
+        <!-- Controls & Interactive Elements -->
         <div class="flex items-center gap-4">
-            <button onclick="toggleMusic()" id="btn-play" class="w-8 h-8 bg-white text-black rounded-full flex items-center justify-center font-bold text-sm hover:scale-105 transition-transform">
+            <button onclick="toggleMusic()" id="btn-play" class="w-8 h-8 bg-white hover:bg-neutral-200 text-black rounded-full flex items-center justify-center font-bold text-xs transition-transform active:scale-95 shadow">
                 ▶
             </button>
-            <span class="text-red-500 text-xs">❤️</span>
+            <span class="text-red-500 text-xs pulse-heart">❤️</span>
         </div>
     </footer>
 
+    <!-- FOOTER CREDITS -->
+    <div class="w-full text-center text-[8px] tracking-[0.4em] text-neutral-600 font-ferrari uppercase pb-24 mt-auto">
+        MADE WITH ❤️ FOR DENAYA HANA ALMIRA
+    </div>
+
+    <!-- JAVASCRIPT CONTROL LOGIC -->
     <script>
         const musik = document.getElementById('bg-music');
         const btnPlay = document.getElementById('btn-play');
         const kontenSurat = document.getElementById('konten-surat');
 
-        // Fungsi Membuka Surat & Otomatis Putar Musik
+        // Fungsi Buka Surat
         function bukaSurat() {
             kontenSurat.classList.remove('hidden');
-            musik.play();
+            musik.play().catch(err => console.log("Audio play blocked by browser. Click play button manually."));
             btnPlay.innerText = "⏸";
-            // Scroll otomatis ke isi surat
-            kontenSurat.scrollIntoView({ behavior: 'smooth' });
+            
+            // Sembunyikan tombol buka setelah diklik agar rapi
+            document.getElementById('btn-buka').style.display = 'none';
+            
+            setTimeout(() => {
+                kontenSurat.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 100);
         }
 
-        // Fungsi Tombol Play/Pause Manual di bawah
+        // Fungsi Play / Pause Manual
         function toggleMusic() {
             if (musik.paused) {
                 musik.play();
@@ -129,6 +212,24 @@
                 btnPlay.innerText = "▶";
             }
         }
+
+        // Hitung Otomatis Sisa Hari ke Ulang Tahun Naya (5 Desember)
+        function hitungMundur() {
+            const sekarang = new Date();
+            let tahunTarget = sekarang.getFullYear();
+            let tanggalTarget = new Date(tahunTarget, 11, 5); // Bulan ke-11 adalah Desember (0-indexed)
+            
+            if (sekarang > tanggalTarget) {
+                tanggalTarget.setFullYear(tahunTarget + 1);
+            }
+            
+            const selisihWaktu = tanggalTarget - sekarang;
+            const sisaHari = Math.ceil(selisihWaktu / (1000 * 60 * 60 * 24));
+            document.getElementById('countdown-days').innerText = sisaHari;
+        }
+        
+        // Jalankan hitung mundur saat halaman dimuat
+        hitungMundur();
     </script>
 </body>
 </html>
