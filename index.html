@@ -17,7 +17,7 @@
         .font-serif-header { font-family: 'Cinzel', serif; }
         .font-serif-body { font-family: 'Playfair Display', serif; }
         
-        /* Efek Neon Halus & Berkelas */
+        /* Efek Neon Merah Berkelas */
         .neon-text-red {
             text-shadow: 0 0 8px rgba(220, 38, 38, 0.7);
         }
@@ -27,23 +27,23 @@
         }
         
         @keyframes pulse {
-            0%, 100% { opacity: 0.5; }
+            0%, 100 { opacity: 0.5; }
             50% { opacity: 0.9; }
         }
         .pulse-slow { animation: pulse 3s infinite ease-in-out; }
 
-        /* Efek gradasi pudar di bawah foto F1 agar menyatu dengan background */
+        /* Gradasi pudar bagian bawah gambar agar menyatu dengan background gelap */
         .fade-bottom {
-            mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
-            -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+            mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
         }
     </style>
 </head>
 <body class="text-neutral-300 min-h-screen flex flex-col items-center justify-between px-4 selection:bg-red-700 selection:text-white">
 
-    <!-- AUDIO ELEMENT -->
+    <!-- AUDIO ELEMENT (Formula 1 Official Theme Song) -->
     <audio id="bg-music" loop>
-        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" type="audio/mpeg">
     </audio>
 
     <!-- HEADER DEKORATIF -->
@@ -53,8 +53,8 @@
     </div>
 
     <!-- MAIN HERO -->
-    <header class="w-full max-w-xl text-center pt-12 pb-10 flex flex-col items-center">
-        <!-- Logo SF Minimalis -->
+    <header class="w-full max-w-xl text-center pt-12 pb-8 flex flex-col items-center">
+        <!-- Logo SF -->
         <div class="w-10 h-12 bg-amber-400 rounded-b-md flex items-center justify-center font-bold text-black text-sm tracking-tighter mb-6 shadow-md">
             SF
         </div>
@@ -68,9 +68,16 @@
             — You are my greatest victory —
         </p>
 
-        <!-- FOTO FERRARI F1 (Ditambahkan di sini dengan style estetik pudar) -->
-        <div class="w-full max-w-md my-4 overflow-hidden rounded-lg fade-bottom opacity-80 border border-neutral-900">
-            <img src="https://images.unsplash.com/photo-1695663738563-7186dfc79c13?q=80&w=800&auto=format&fit=crop" alt="Ferrari F1" class="w-full h-48 object-cover object-center filter contrast-125 saturate-75">
+        <!-- GRID FOTO: Charles Leclerc & Mobil F1 Ferrari -->
+        <div class="grid grid-cols-2 gap-3 w-full max-w-md my-4 fade-bottom opacity-85">
+            <!-- Foto Charles Leclerc -->
+            <div class="overflow-hidden rounded-l-lg border border-neutral-900">
+                <img src="https://images.unsplash.com/photo-1627626775846-122b778965ae?q=80&w=400&auto=format&fit=crop" alt="Charles Leclerc" class="w-full h-44 object-cover filter contrast-110 brightness-90">
+            </div>
+            <!-- Foto Mobil Ferrari F1 -->
+            <div class="overflow-hidden rounded-r-lg border border-neutral-900">
+                <img src="https://images.unsplash.com/photo-1695663738563-7186dfc79c13?q=80&w=400&auto=format&fit=crop" alt="Ferrari F1" class="w-full h-44 object-cover filter contrast-110 brightness-90">
+            </div>
         </div>
 
         <!-- TOMBOL BUKA SURAT -->
@@ -94,7 +101,7 @@
                 <p>Hai sayang,</p>
                 <p>Aku mau minta maaf dengan tulus dari hati yang paling dalam.</p>
                 
-                <!-- Aksen merah tegas hanya pada poin utama ini -->
+                <!-- Poin utama tetap berwarna merah tegas -->
                 <p class="text-red-500 font-normal tracking-wide text-base neon-text-red not-italic font-serif-header py-2">
                     Maafin aku sudah ngatain tiffosi.
                 </p>
@@ -104,11 +111,11 @@
                 <p>Terima kasih karena selalu sabar dan tetap ada buat aku. Aku beruntung punya kamu.</p>
             </div>
 
-            <!-- FOTO POLAROID ELEGAN -->
+            <!-- FOTO POLAROID ELEGAN PACAR -->
             <div class="mt-12 flex justify-center">
                 <div class="bg-neutral-900 border border-neutral-800 p-3 pb-6 rounded-sm shadow-2xl transform rotate-1 hover:rotate-0 transition-transform duration-500 w-52">
                     <!-- Memanggil file foto-naya.jpg yang kamu upload -->
-                    <img src="foto-naya.jpg" alt="Denaya" class="w-full h-44 object-cover border border-neutral-800 mb-4" onerror="this.src='https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=400';">
+                    <img src="foto-naya.jpg" alt="Denaya" class="w-full h-44 object-cover border border-neutral-800 mb-4" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=400';">
                     <div class="font-serif-body italic text-xs text-neutral-400 text-center tracking-wide">Charles Leclerc ♡</div>
                 </div>
             </div>
@@ -130,15 +137,15 @@
         </div>
     </main>
 
-    <!-- MUSIC PLAYER BAR (MINIMALIS) -->
+    <!-- MUSIC PLAYER BAR (Formula 1 Theme Layout) -->
     <footer class="fixed bottom-4 left-4 right-4 max-w-sm mx-auto bg-neutral-950/95 border border-neutral-900 rounded-lg p-3 flex items-center justify-between backdrop-blur-md shadow-2xl z-50">
         <div class="flex items-center gap-3">
-            <div class="w-8 h-8 bg-neutral-900 border border-neutral-800 rounded flex items-center justify-center text-[10px] text-neutral-400 font-serif-header font-bold">
-                #16
+            <div class="w-8 h-8 bg-red-600 rounded flex items-center justify-center text-[10px] text-white font-serif-header font-bold shadow-inner">
+                F1
             </div>
             <div>
-                <div class="text-[11px] font-medium text-neutral-200 tracking-wide">A Sky Full of Stars</div>
-                <div class="text-[9px] text-neutral-500">Coldplay</div>
+                <div class="text-[11px] font-medium text-neutral-200 tracking-wide">Formula 1 Official Theme</div>
+                <div class="text-[9px] text-neutral-500">Brian Tyler</div>
             </div>
         </div>
         
