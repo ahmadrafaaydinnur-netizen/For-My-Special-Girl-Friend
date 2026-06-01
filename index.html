@@ -22,20 +22,37 @@
             text-shadow: 0 0 8px rgba(220, 38, 38, 0.7);
         }
         .elegant-border {
-            border: 1px solid rgba(220, 38, 38, 0.2);
-            box-shadow: 0 0 35px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(220, 38, 38, 0.15);
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.85);
         }
         
         @keyframes pulse {
-            0%, 100% { opacity: 0.5; }
-            50% { opacity: 0.9; }
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 0.8; }
         }
         .pulse-slow { animation: pulse 3s infinite ease-in-out; }
 
-        /* Gradasi pudar bagian bawah gambar agar menyatu dengan background gelap */
-        .fade-bottom {
-            mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-            -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+        /* Efek menyatukan foto ke background gelap secara mulus */
+        .blend-race-photo {
+            mix-blend-mode: luminosity;
+            opacity: 0.75;
+            filter: contrast(120%) brightness(85%);
+            transition: all 0.5s ease;
+        }
+        .blend-race-photo:hover {
+            mix-blend-mode: normal;
+            opacity: 0.95;
+            filter: contrast(110%) brightness(95%);
+        }
+
+        /* Gradasi halus di sekeliling grid foto agar menyatu sempurna */
+        .fade-image-container {
+            mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 80%, transparent 100%),
+                        linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+            mask-composite: intersect;
+            -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 80%, transparent 100%),
+                                linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+            -webkit-mask-composite: source-in;
         }
     </style>
 </head>
@@ -68,15 +85,17 @@
             — You are my greatest victory —
         </p>
 
-        <!-- GRID FOTO BERDASARKAN REFERENSI -->
-        <div class="grid grid-cols-2 gap-3 w-full max-w-md my-4 fade-bottom opacity-90">
-            <!-- Foto 1: Charles Leclerc -->
-            <div class="overflow-hidden rounded-l-lg border border-neutral-900/60 aspect-[4/5]">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3ki20lteODVhoGiHnb1DjaZFOa1xgFFup0w&s" alt="Charles Leclerc" class="w-full h-full object-cover filter contrast-110 brightness-90">
-            </div>
-            <!-- Foto 2: Mobil F1 Ferrari -->
-            <div class="overflow-hidden rounded-r-lg border border-neutral-900/60 aspect-[4/5]">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShdUpgFDAABZ7V9ZOxpnOn_8l0xyAp_v-Gmg&s" alt="Ferrari F1" class="w-full h-full object-cover filter contrast-115 brightness-90">
+        <!-- GRID FOTO YANG MENYATU DENGAN BACKGROUND -->
+        <div class="fade-image-container w-full max-w-md my-2">
+            <div class="grid grid-cols-2 gap-2">
+                <!-- Foto 1: Charles Leclerc -->
+                <div class="overflow-hidden aspect-[4/5] bg-neutral-950">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3ki20lteODVhoGiHnb1DjaZFOa1xgFFup0w&s" alt="Charles Leclerc" class="w-full h-full object-cover blend-race-photo">
+                </div>
+                <!-- Foto 2: Mobil F1 Ferrari -->
+                <div class="overflow-hidden aspect-[4/5] bg-neutral-950">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShdUpgFDAABZ7V9ZOxpnOn_8l0xyAp_v-Gmg&s" alt="Ferrari F1" class="w-full h-full object-cover blend-race-photo">
+                </div>
             </div>
         </div>
 
@@ -111,12 +130,16 @@
                 <p>Terima kasih karena selalu sabar dan tetap ada buat aku. Aku beruntung punya kamu.</p>
             </div>
 
-            <!-- FOTO POLAROID: CHARLES LECLERC ASLI (Sesuai Poster Referensi) -->
+            <!-- PERBAIKAN FOTO: DIUBAH MENJADI LOGO F1 MINIMALIS ELEGAN -->
             <div class="mt-12 flex justify-center">
-                <div class="bg-neutral-900 border border-neutral-800 p-3 pb-6 rounded-sm shadow-2xl transform rotate-1 hover:rotate-0 transition-transform duration-500 w-52">
-                    <!-- Foto Charles Leclerc mencium piala kemenangan F1 -->
-                    <img src="https://assets.formula1.com/image/upload/f_auto,c_fill,g_auto,q_auto,w_1320,h_743/fom-web/manual/Monaco%20GP%202024/LeclercMonacoTrophy" alt="Charles Leclerc Trophy" class="w-full h-44 object-cover border border-neutral-800 mb-4">
-                    <div class="font-serif-body italic text-xs text-neutral-400 text-center tracking-wide">Denaya Hana Almira ♡</div>
+                <div class="bg-neutral-900 border border-neutral-800 p-4 pb-6 rounded-sm shadow-2xl transform rotate-1 hover:rotate-0 transition-transform duration-500 w-52 flex flex-col items-center">
+                    <!-- Wadah Logo F1 Ganti Foto Cewek Lama -->
+                    <div class="w-full h-36 bg-neutral-950 rounded flex items-center justify-center p-4 border border-neutral-800/50 mb-4">
+                        <svg class="w-full h-auto text-red-600 filter drop-shadow-[0_0_6px_rgba(220,38,38,0.6)]" viewBox="0 0 24 10" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 10H3.344L4.856 4.394H12.336V1.472H5.644L6.036 0H0V10ZM14.156 10H17.5L18.428 6.556H24V3.633H19.212L20.176 0H14.156V10Z"/>
+                        </svg>
+                    </div>
+                    <div class="font-serif-header text-[10px] text-neutral-400 text-center tracking-[0.2em] uppercase">Scuderia Ferrari ♡</div>
                 </div>
             </div>
 
