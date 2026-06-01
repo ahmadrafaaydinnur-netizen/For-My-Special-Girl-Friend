@@ -27,15 +27,15 @@
         }
         
         @keyframes pulse {
-            0%, 100 { opacity: 0.5; }
+            0%, 100% { opacity: 0.5; }
             50% { opacity: 0.9; }
         }
         .pulse-slow { animation: pulse 3s infinite ease-in-out; }
 
         /* Gradasi pudar bagian bawah gambar agar menyatu dengan background gelap */
         .fade-bottom {
-            mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
-            -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+            mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
         }
     </style>
 </head>
@@ -68,20 +68,20 @@
             — You are my greatest victory —
         </p>
 
-        <!-- GRID FOTO: Charles Leclerc & Mobil F1 Ferrari -->
-        <div class="grid grid-cols-2 gap-3 w-full max-w-md my-4 fade-bottom opacity-85">
-            <!-- Foto Charles Leclerc -->
-            <div class="overflow-hidden rounded-l-lg border border-neutral-900">
-                <img src="https://images.unsplash.com/photo-1627626775846-122b778965ae?q=80&w=400&auto=format&fit=crop" alt="Charles Leclerc" class="w-full h-44 object-cover filter contrast-110 brightness-90">
+        <!-- GRID FOTO BERDASARKAN REFERENSI -->
+        <div class="grid grid-cols-2 gap-3 w-full max-w-md my-4 fade-bottom opacity-90">
+            <!-- Foto 1: Charles Leclerc -->
+            <div class="overflow-hidden rounded-l-lg border border-neutral-900/60 aspect-[4/5]">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3ki20lteODVhoGiHnb1DjaZFOa1xgFFup0w&s" alt="Charles Leclerc" class="w-full h-full object-cover filter contrast-110 brightness-90">
             </div>
-            <!-- Foto Mobil Ferrari F1 -->
-            <div class="overflow-hidden rounded-r-lg border border-neutral-900">
-                <img src="https://images.unsplash.com/photo-1695663738563-7186dfc79c13?q=80&w=400&auto=format&fit=crop" alt="Ferrari F1" class="w-full h-44 object-cover filter contrast-110 brightness-90">
+            <!-- Foto 2: Mobil F1 Ferrari -->
+            <div class="overflow-hidden rounded-r-lg border border-neutral-900/60 aspect-[4/5]">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShdUpgFDAABZ7V9ZOxpnOn_8l0xyAp_v-Gmg&s" alt="Ferrari F1" class="w-full h-full object-cover filter contrast-115 brightness-90">
             </div>
         </div>
 
         <!-- TOMBOL BUKA SURAT -->
-        <button onclick="bukaSurat()" id="btn-buka" class="mt-4 bg-transparent hover:bg-neutral-900 text-neutral-200 border border-neutral-800 hover:border-neutral-700 px-8 py-3 rounded-sm text-[10px] tracking-[0.25em] font-serif-header transition-all duration-300 shadow-lg">
+        <button onclick="bukaSurat()" id="btn-buka" class="mt-6 bg-transparent hover:bg-neutral-900 text-neutral-200 border border-neutral-800 hover:border-neutral-700 px-8 py-3 rounded-sm text-[10px] tracking-[0.25em] font-serif-header transition-all duration-300 shadow-lg">
             BUKA SURAT UNTUK DENAYA ✉️
         </button>
     </header>
@@ -111,7 +111,7 @@
                 <p>Terima kasih karena selalu sabar dan tetap ada buat aku. Aku beruntung punya kamu.</p>
             </div>
 
-            <!-- FOTO POLAROID ELEGAN PACAR -->
+            <!-- FOTO POLAROID PACAR -->
             <div class="mt-12 flex justify-center">
                 <div class="bg-neutral-900 border border-neutral-800 p-3 pb-6 rounded-sm shadow-2xl transform rotate-1 hover:rotate-0 transition-transform duration-500 w-52">
                     <!-- Memanggil file foto-naya.jpg yang kamu upload -->
